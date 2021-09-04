@@ -123,7 +123,7 @@ def proteomes2dict(proteomes_path):
     # Keys: species names
     # Values: gene names as keys and sequences as values
 
-    #folder_path = '/Users/klara_el/bioinfo/Thesis/Duplications/teleost_proteomes/'
+    # Place all proteomes of the analysis in a folder 
     folder_path = proteomes_path
     fasta_paths = glob.glob(os.path.join(folder_path, '*.fasta'))
 
