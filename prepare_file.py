@@ -19,7 +19,7 @@ species_to_delete = ["Sphaeramia_orbicularis","Myripristis_murdjan", \
                     "Gadus_morhua","Danio_rerio", "Triplophysa_tibetana", \
                     "Astyanax_mexicanus", "Electrophorus_electricus",      \
                     "Pangasianodon_hypophthalmus", "Lepisosteus_oculatus"] # The species to delete from the initial analysis.
-                                                                           # We kept the 24 closest to Sparus aurata
+                                                                           # We kept the 24 closest species to Sparus aurata
 
 species_of_interest = tsv_file2df.drop(species_to_delete, axis = 1) # Final dataframe from initial file
 
@@ -36,7 +36,6 @@ hogs_80 = saurata_no_null.dropna( axis=0,thresh=saurata_no_null.shape[1]-min_cou
 # hogs_count.to_excel('/path/to/folder/species_per_hog.xlsx')
 
 # Write df to csv (csv file will be the input file to hogsToFasta.py)
-#clean_file = "/Users/klara_el/bioinfo/Thesis/Duplications/test/N0_clean.tsv"
 clean_file = "/path/to/folder/N0_clean.tsv"
 new_tsv = hogs_80.to_csv(clean_file, index=True, sep="\t", na_rep='', float_format=None,header=True, index_label=None, \
                         mode='w',encoding=None, date_format=None, decimal='.')
