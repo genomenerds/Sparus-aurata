@@ -9,7 +9,6 @@
 import sys
 import pandas as pd
 
-#tsv_file = '/Users/klara_el/bioinfo/Thesis/Duplications/N0.tsv'
 tsv_file = sys.argv[1]
 tsv_file2df = pd.read_csv(tsv_file, sep='\t', header=0, index_col=False) # Initial input file to dataframe
 tsv_file2df = tsv_file2df.set_index('HOG') # Set the first column as index (HOG name)
